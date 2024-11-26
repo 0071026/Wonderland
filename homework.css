@@ -1,0 +1,152 @@
+.first {
+
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/bg11.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+    width: 1900px;
+    height: 900px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    width: 300px;
+    height: 100px;
+    margin: 0px auto;
+}
+
+li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1px 90px;
+    line-height: 100px;
+
+}
+
+li a:hover {
+    color: rgb(38, 129, 233);
+}
+
+.logo {
+    margin: 0 auto;
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/3ff48685d440b5aa1c0d7c582471df27.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.second {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%B1%82%203.png);
+    background-repeat: no-repeat;
+    width: 1900px;
+    height: 1000px;
+
+
+}
+
+.welcome {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-right: 5px;
+}
+
+.wenben {
+
+    width: 600px;
+    background-color: rgba(240, 248, 255, 0.15);
+    font-family: sans-serif;
+    line-height: 50px;
+    background-position: right center;
+
+
+}
+
+.p {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+}
+
+.third {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/LAMY%E5%90%84%E7%B3%BB%E5%88%97.png);
+    width: 1900px;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-position: top;
+}
+
+
+.fourth {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/p24964204.png);
+    width: 1900px;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.fifth {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/19dd10dc3cab4b509c7960d42422995c.png);
+    width: 1900px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sixth {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/6115ac448a62d662e3f46d332f7374f7.png);
+    width: 1900px;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.buy {
+    text-decoration: none;
+    height: 50px;
+    text-align: center bottom;
+    background-color: brown;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.seventh {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/a759229c3ba7c2bbf1ac6fc9289572cb.png);
+    width: 1900px;
+    height: 1000px;
+    background-repeat: no-repeat;
+}
+
+.p2 {
+    width: 400px;
+
+    text-align: center 30px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.last {
+    background-repeat: no-repeat;
+}
+
+.recommend {
+    text-decoration: none;
+    height: 50px;
+    text-align: center bottom;
+    background-color: rgb(178, 37, 37);
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.eighth {
+    background-image: url(https://ggbon.oss-cn-beijing.aliyuncs.com/=0.png);
+    width: 1900px;
+    height: 1000px;
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
