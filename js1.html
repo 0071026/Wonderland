@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        请输入一个字符串：<br>
+        <input type="text" id="str">
+        <br>
+        请输入一个子串：<br>
+        <input type="text" id="str1">
+        <button id="result">提交</button><br>
+        <span id="number">子字符串出现次数为：</span>
+    </div>
+    <script>
+        let strInput = document.getElementById('str');
+        let str1Input = document.getElementById('str1');
+        let resultButton = document.getElementById('result');
+        resultButton.addEventListener('click', function () {
+
+            let mainstr = strInput.value;
+            let substr = str1Input.value;
+            let count = 0;
+            let index = mainstr.indexOf(substr);
+            while (index !== -1) {
+                count++;
+                index = mainstr.indexOf(substr, index + substr.length);
+            }
+            document.getElementById('number').innerHTML = '子字符串出现次数为:' + count
+        });
+    </script>
+</body>
+
+</html>
