@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册与查询</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="time">当前时间为：</div>
+
+    账号：<input type="text" class="account"><br>
+    密码：<input type="password" class="password"><br>
+    <button type="submit" class="register">注册</button>
+    <button type="submit" class="get">获取用户列表</button>
+    <div class="list"></div>
+    <script>
+        axios({
+            url: 'http://43.143.169.168:9090/time/now',
+            method: 'get'
+        }).then(res => {
+            document.querySelector('.time').innerHTML = '当前时间为：' + res.data.data
+            console.log(res)
+        })
+
+        const register = document.querySelector('.register')
+        register.onclick = () => {
+            const account = document.querySelector('.account').value.trim()
+            const password = document.querySelector('.password').value.trim()
+            axios({
+                url: 'http://43.143.169.168:9090/user/register',
+                method: 'POST',
+                data: {
+                    username: account,
+                    password: password
+                }
+            }).then(res => {
+                console.log(res)
+            })
+
+        }
+        const get = document.querySelector('.get')
+        get.onclick = () => {
+            axios({
+                method: 'GET',
+                url: 'http://43.143.169.168:9090/user/all'
+            }).then((res) => {
+                document.querySelector('.list').innerHTML = res.data.data.map(item => `<p>${item}</p>`)
+            })
+        }
+
+    </script>
+</body>
+
+</html>
