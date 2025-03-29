@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <form action="">
+            <input type="text" placeholder="请输入" v-model="newword" @keydown.enter.prevent="add"><br>
+            <span>你要输入的内容是{{newword}}</span><br>
+            <button @click.prevent="add">添加</button>
+            <button @click.prevent="deletelast">删除</button>
+        </form>
+        <ul>
+            列表：
+            <div class="remind" v-show="words.length>5" style="color: red;"> 数量太多了 </div>
+            <li v-for="(word,index) in words" :key="index" v-if="words.length<=5">{{word}}</li>
+            <li v-for="(word,index) in words" :key="index" v-else-if="words.length>5" style="color: red;">
+                {{word}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                newword: '',
+                words: [],
+            };
+        },
+        methods: {
+            add() {
+                this.words.push(this.newword);
+                this.newword = '';
+            },
+            deletelast() {
+                if (this.words.length > 0) {
+                    this.words.splice(this.words.length - 1, 1);
+                }
+            }
+        },
+
+    }).mount('#app')
+</script>
+
+</html>
